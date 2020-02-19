@@ -1,6 +1,6 @@
 <template>
   <!--    MIDDLE COLUMN-->
-  <div class="col-5">
+  <div class="col-lg-5">
 
     <create-post :username="username" :password="password"></create-post>
     <br>

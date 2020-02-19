@@ -1,5 +1,5 @@
 <template>
-  <div class="card col-4" style="height: fit-content">
+  <div class="card col-lg-4" style="height: fit-content">
     <div class="card-header">
       People
     </div>

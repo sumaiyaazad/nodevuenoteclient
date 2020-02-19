@@ -1,5 +1,5 @@
 <template>
-  <div>
+
     <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #39559F">
 
       <!--    NAV BAR LOGO-->
@@ -7,28 +7,24 @@
         <img src="https://sumaiyaazad.github.io/nodevuenoteclient/logo.png" width="30" height="30" alt="">
       </a>
 
-
-      <!--    SEARCH BAR-->
-      <div class="form-inline" v-if="logIn">
-        <input class="form-control" type="search" placeholder="Search" aria-label="Search" v-on:keyup.enter="search" v-model="searchUser">
-
-      </div>
-
-
-      <!--    USERNAME AND LOGOUT BUTTON-->
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup"  v-if="logIn">
-        <div class="navbar-nav" >
-          <a class="nav-item nav-link" style="text-decoration-color: white" href="#" @click="userNotes">{{username}}</a>
-          <a class="nav-item nav-link" href="#" @click="hide">Log Out</a>
-        </div>
-      </div>
-
       <!--SPINNER-->
       <div v-if="spinnerOn" class="spinner-border text-light" role="status">
         <span class="sr-only">Loading...</span>
       </div>
+
+        <div class="navbar-nav" >
+          <!--    SEARCH BAR-->
+          <div class="form-inline" v-if="logIn">
+            <input class="form-control" type="search" placeholder="Search" aria-label="Search" v-on:keyup.enter="search" v-model="searchUser">
+          </div>
+          <a class="nav-item nav-link" style="text-decoration-color: white" href="#" @click="userNotes">{{username}}</a>
+          <a class="nav-item nav-link" href="#" @click="hide">Log Out</a>
+        </div>
+
+
     </nav>
-  </div>
+
+
 </template>
 
 <script>

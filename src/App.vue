@@ -3,9 +3,11 @@
     <app-navigation-bar :logIn="logIn" :username="username" v-bind:password="password"></app-navigation-bar>
     <div class="p-5">
       <div class="row">
-        <component :is="sign" :sign="sign" :username="username" :password="password"></component>
         <app-middle-portion v-if="logIn" :username="username" :password="password"></app-middle-portion>
+        <br>
         <app-recent-search v-if="logIn && userList.length!==0" :userList="userList"  :username="username"></app-recent-search>
+        <br>
+        <component :is="sign" :sign="sign" :username="username" :password="password"></component>
       </div>
     </div>
   </div>

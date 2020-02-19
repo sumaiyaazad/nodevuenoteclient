@@ -1,5 +1,5 @@
 <template>
-  <div class="col-3">
+  <div class="col-lg-3">
     <div class="form-group">
       <label for="exampleInputEmail1">Username</label>
       <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"  v-model="name">
