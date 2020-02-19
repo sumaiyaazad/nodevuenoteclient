@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>pro</title>
+  </head>
+  <body style="background-color: #dddddd">
+
+<!--  NAV BAR-->
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #39559F">
+
+    <!--    NAV BAR LOGO-->
+    <a class="navbar-brand" href="#" >
+      <img src="components/logo2.png" width="30" height="30" alt="">
+    </a>
+
+    <!--    SEARCH BAR-->
+    <div class="form-inline">
+      <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+    </div>
+
+    <!--    USERNAME AND LOGOUT BUTTON-->
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup" >
+      <div class="navbar-nav" >
+        <a class="nav-item nav-link" style="text-decoration-color: white" href="#" >Username</a>
+        <a class="nav-item nav-link" href="#" >Log Out</a>
+      </div>
+    </div>
+  </nav>
+
+<!--REST OF THE PAGE -->
+<div class="p-5">
+  <div class="row">
+
+    <!--    LEFTMOST COLUMN-->
+    <div class="col-3">
+      <div class="form-group">
+        <label for="exampleInputEmail1">Username</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" >
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1">
+      </div>
+      <button type="submit" class="btn btn-outline-primary active" style="background-color: #39559F">Sign In</button>
+      <button type="submit" class="btn btn-outline-primary" style="color:#39559F">Sign Up</button>
+    </div>
+
+    <!--    MIDDLE COLUMN-->
+    <div class="col-5">
+
+      <!--      NEW POST COMPONENT-->
+      <div class="card text-center" style="length:50rem">
+        <div class="card-header">
+          Create Post
+        </div>
+        <div class="card-body">
+          <input type="text" style="width: 100%">
+        </div>
+        <div class="card-footer">
+          <a href="#" class="btn btn-primary" style="background-color: #39559F">Post</a>
+          <a href="#" class="btn btn-primary" style="background-color: #39559F">Cancel</a>
+        </div>
+      </div>
+      <br>
+
+      <!--      LIST OF POSTS-->
+      <div>
+
+        <!--        A POST SAMPLE-->
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Name1</h5>
+            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            <a href="#" class="btn btn-primary" style="background-color: #39559F">Delete</a>
+          </div>
+        </div>
+
+        <!--        A POST SAMPLE-->
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Name2</h5>
+            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            <a href="#" class="btn btn-primary" style="background-color: #39559F">Delete</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!--      PAGINATION NAVBAR-->
+      <nav aria-label="Page navigation example" style="color: #39559F">
+        <ul class="pagination">
+          <li class="page-item">
+            <a class="page-link" href="#" >
+              <span aria-hidden="true">&laquo;</span>
+            </a>
+          </li>
+
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+
+          <li class="page-item">
+            <a class="page-link" href="#" >
+              <span aria-hidden="true">&raquo;</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+    </div>
+
+    <!--    SEARCH RESULTS-->
+    <div class="card col-4" style="height: fit-content">
+      <div class="card-header">
+        People
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Name1</li>
+        <li class="list-group-item">Name2</li>
+        <li class="list-group-item">Name3</li>
+      </ul>
+    </div>
+
+  </div>
+
+</div>
+
+  </body>
+</html>
