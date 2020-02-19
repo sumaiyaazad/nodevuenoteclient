@@ -4,7 +4,7 @@
 
       <!--    NAV BAR LOGO-->
       <a class="navbar-brand" href="#" style="padding-left: 20%">
-        <img src="logo.png" width="30" height="30" alt="">
+        <img src="https://sumaiyaazad.github.io/nodevuenoteclient/logo.png" width="30" height="30" alt="">
       </a>
 
 
