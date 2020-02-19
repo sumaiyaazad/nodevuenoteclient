@@ -50,7 +50,7 @@
           return;
         }
 
-
+          self.$store.commit('setLoadingTrue');
         this.axios.post('/changepassword', {
           username: this.username,
           password: this.password,
@@ -65,6 +65,7 @@
           }else{
             console.log(response.data.message);
           }
+            self.$store.commit('setLoadingFalse');
         }).catch(function (error) {
           //console.log(error);
         });

@@ -16,6 +16,8 @@
   methods:{
     getUserPosts(user){
       var self=this;
+
+      self.$store.commit('setLoadingTrue');
       this.axios.post('/getusernotes',{
         name:user,
       }).then(function(response){

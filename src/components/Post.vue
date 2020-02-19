@@ -50,6 +50,8 @@
           console.log('hello babyyyy');
           console.log('username in delete post',self.user);
           console.log(self.password);
+
+            self.$store.commit('setLoadingTrue');
           this.axios.post('/getnotes', {
             username: this.user,
             password: this.password,
@@ -59,6 +61,7 @@
             self.notes = response.data.notes;
             console.log(response.data.notes);
             eventBus.$emit('postDeleted',self.notes);
+              self.$store.commit('setLoadingFalse');
           }).catch(function (error) {
 
           });

@@ -29,25 +29,25 @@
       eventBus.$emit('signChanged',this.sign);
     },
      checkUser(){
-      eventBus.$emit('spinnerOn',{});
+
       var self=this;
 
+         self.$store.commit('setLoadingTrue');
        this.axios.post('/signin', {
          username: this.name,
          password: this.password
        }).then(function (response) {
-         console.log(response.data.success,response.data.message);
-         if(response.data.success) {
-           console.log('Successful login');
-           self.logIn=true;
-           eventBus.$emit('loggedIn',self.logIn,self.name,self.password);
-           eventBus.$emit('spinnerOff',{});
-         }else{
-           console.log('unsuccessful login');
-           eventBus.$emit('spinnerOff',{});
-         }
+           console.log(response.data.success,response.data.message);
+           if(response.data.success) {
+             console.log('Successful login');
+             self.logIn=true;
+             eventBus.$emit('loggedIn',self.logIn,self.name,self.password);
+           }else{
+             console.log('unsuccessful login');
+           }
+           self.$store.commit('setLoadingFalse');
        }).catch(function (error) {
-
+           self.$store.commit('setLoadingFalse');
        });
 
 

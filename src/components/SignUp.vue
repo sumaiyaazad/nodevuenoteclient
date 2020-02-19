@@ -45,6 +45,7 @@
         var self=this;
         console.log('username: ',this.name,' password: ',this.password);
 
+        self.$store.commit('setLoadingTrue');
         this.axios.post('/signup', {
           username: this.name,
           password: this.password
@@ -56,6 +57,8 @@
           }else{
 
           }
+
+            self.$store.commit('setLoadingFalse');
         }).catch(function (error) {
           //console.log(error);
         });
