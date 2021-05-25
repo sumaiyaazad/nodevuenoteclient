@@ -17,7 +17,8 @@ import VueAxios from 'vue-axios'
 import {store} from "./store";
 
 // axios.defaults.baseURL='https://mt-notebook.herokuapp.com/';
-axios.defaults.baseURL='https://mt-notebook-backend:4000';
+// axios.defaults.baseURL='http://192.168.99.100:4000';
+axios.defaults.baseURL='http://mt-notebook-backend:4000';
 Vue.use(VueAxios, axios);
 Vue.config.productionTip = false;
 
