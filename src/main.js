@@ -21,7 +21,7 @@ import {store} from "./store";
 //axios.defaults.baseURL='http://mt-notebook-backend:4000';
 let host=location.host.split(':')[0]
 axios.defaults.baseURL='http://'+host+':4000';
-//console.log(axios.defaults.baseURL);
+console.log(axios.defaults.baseURL);
 Vue.use(VueAxios, axios);
 Vue.config.productionTip = false;
 
